@@ -31,18 +31,17 @@ ferramentas para visualizar os dados salvos.* :warning:
 * purchases => purchases_transactions | (transações de compra que irão ser lidas do broker)
 
 ### Redis irá guardar somente a busca de aplicativos:
-* Name: InstanceRedisApps
+* NameKey: InstanceRedisApps
 
 ### RabbitMq receberá o evento da compra de aplicativo: 
-* NameBroker: purchases
+* NameQueue: purchases
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
-### 1 - Link do mongodb e redis grátis necessários para visualizar os dados sendo salvos (caso não tiver salvo na máquina):
+### 1 - Links do mongodb e redis grátis. Necessários para visualizar os dados sendo salvos (caso não tiver salvo na máquina):
 
 * Redis: https://github.com/qishibo/AnotherRedisDesktopManager/releases
 * MongoDb: https://nosqlbooster.com/downloads
-* RabbitMq: http://localhost:15672/
 
 ### 2 - Entrar na pasta ./AppPurchases.Api e executar o comando `docker compose up` para subir as imagens do mongodb, redis e rabbitmq;
 
