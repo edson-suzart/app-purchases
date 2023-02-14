@@ -1,0 +1,37 @@
+version: "3.8"
+
+services:
+  mongodb:
+    image: mongo:3.6
+    container_name: mongodb
+    restart: always
+    volumes:
+      - ./docker-entrypoint-initdb.d/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    ports:
+      - 27017:27017
+      - 9229:9229
+
+  rabbitmq:
+       image: rabbitmq:3.7-management
+       tty: true
+       container_name: rabbitmq
+       hostname: rabbitmq
+       ports:
+           - "15672:15672"
+           - "5672:5672"
+       environment:
+         - RABBITMQ_DEFAULT_USER=root
+         - RABBITMQ_DEFAULT_PASS=root
+
+  cache:
+    image: redis:6.2-alpine
+    container_name: redis
+    restart: always
+    ports:
+      - '6379:6379'
+    command: redis-server --save 20 1 --loglevel warning 
+    volumes: 
+      - cache:/data
+volumes:
+  cache:
+    driver: local
