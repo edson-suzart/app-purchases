@@ -51,4 +51,4 @@ Containers criados... mas e as credenciais para acessar local?
 * Redis: redis://localhost:6379 | não precisa de credenciais
 * MongoDb: mongodb://localhost:27017 | não precisa de credenciais
 
-E por fim é isso.
+E por fim é isso. Taca-lhe pau nesse carrrinho!
