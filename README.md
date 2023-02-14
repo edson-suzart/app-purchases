@@ -1,4 +1,4 @@
-**Projeto webapi para cadastrar clientes e realizar compras de aplicativos.**
+**Projeto webapi para realizar compras de aplicativos.**
 
 ## Tecnologias e conceitos utilizados:
 
