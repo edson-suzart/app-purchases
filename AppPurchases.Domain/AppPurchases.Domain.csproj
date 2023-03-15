@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="FluentAssertions.CSharpFunctionalExtensions" Version="1.0.2" />
+    <PackageReference Include="MongoDB.Bson" Version="2.19.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AppPurchases.Application\AppPurchases.Application.csproj" />
+    <ProjectReference Include="..\AppPurchases.Shared\AppPurchases.Shared.csproj" />
+  </ItemGroup>
+
+</Project>
